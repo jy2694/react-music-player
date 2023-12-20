@@ -1,0 +1,220 @@
+@keyframes open-playlist{
+    0%{
+        right: -35%;
+    }
+    100%{
+        right: 0;
+    }
+}
+@keyframes close-playlist{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -35%;
+    }
+}
+@keyframes open-playlist-button{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: 35%;
+    }
+}
+@keyframes close-playlist-button{
+    0%{
+        right: 35%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+@keyframes open-playlist-button-text{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes close-playlist-button-text{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+.playlist{
+    position: absolute;
+    height: 100vh;
+    width: 35%;
+    right: 0;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+}
+
+.playlist-open {
+    animation: open-playlist;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.playlist-close{
+    animation: close-playlist;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.playlist-visible-button{
+    position: absolute;
+    height: 10vh;
+    width: 2%;
+    top: 50%;
+    right: calc(35% + 1px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-open{
+    animation: open-playlist-button;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.button-close{
+    animation: close-playlist-button;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.button-text-open{
+    animation: open-playlist-button-text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+.button-text-close{
+    animation: close-playlist-button-text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.playlist-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    height: 5vh;
+    overflow: hidden;
+}
+
+.playlist-title-text {
+    font-size: x-large;
+    font-family: 'SUITE-Bold';
+    margin: 1%;
+    padding: 1%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all;
+    transition-duration: 0.05s;
+}
+.playlist-title-text:hover{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.playlist-body {
+    width: 100%;
+    max-height: 95vh;
+    overflow: auto;
+}
+.playlist-element-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all;
+    transition-duration: 0.05s;
+}
+.playlist-element-control{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: x-large;
+}
+.playlist-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    
+}
+.playlist-element-wrapper:hover{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.playlist-element-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 98%;
+}
+
+.playlist-element-inner>* {
+    text-align: start;
+}
+
+.playlist-element-inner>.title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.playlist-element-inner>.author {
+    font-size: x-small;
+}
+
+.playlist-element-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.playlist-element-buttons-wrapper>.url {
+    margin: 1%;
+    color: gray;
+    font-size: xx-small;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.playlist-element-button {
+    margin: 1%;
+    font-size: small;
+    cursor: pointer;
+}

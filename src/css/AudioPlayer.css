@@ -1,0 +1,139 @@
+@keyframes cd-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cd-image {
+    width: 40vh;
+    min-height: 40vh;
+    max-height: 40vh;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 50% 50%;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 10vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 5vh;
+}
+
+.run{
+    animation: cd-rotate 5s linear infinite;
+}
+
+.cd-image>.cd-image-inner {
+    background-color: white;
+    width: 8vh;
+    min-height: 8vh;
+    max-height: 8vh;
+    border-radius: 50%;
+}
+
+.player-information-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.player-information-wrapper>.title {
+    font-size: x-large;
+    font-family: 'SUITE-Bold';
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.player-information-wrapper>.author {
+    font-size: small;
+}
+
+.player-volume-wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 80%;
+}
+.player-volume{
+    position: absolute;
+    width: 3%;
+    height: 100px;
+    transform: translate(-35%, -60%);
+    background-color: white;
+}
+.player-control-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.player-buttons-wrapper {
+    width: 50%;
+    min-height: 8vh;
+    max-height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    width: 5vh;
+    min-height: 5vh;
+    max-height: 5vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    border: 1px solid transparent;
+}
+
+.button:hover {
+    transition: all;
+    transition-duration: 0.3s;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.button:active {
+    color: gray;
+}
+
+.progressbar {
+    width: 80%;
+    min-height: 5px;
+    max-height: 5px;
+    border-radius: 5px;
+    background-color: gray;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    margin: 5%;
+}
+
+.progressbar-inner {
+    min-height: 5px;
+    max-height: 5px;
+    background-color: skyblue;
+}
