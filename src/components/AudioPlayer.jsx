@@ -43,6 +43,7 @@ export default function AudioPlayer(props) {
             }
         }
     }
+    
     function delay(ms=1000){
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
